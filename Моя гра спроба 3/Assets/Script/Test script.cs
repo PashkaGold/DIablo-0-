@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Testscript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody2D rd;
+    private float Xvelocity, speed ;
 
-    // Update is called once per frame
-    void Update()
+     void Start()
     {
-        
+        rd = GetComponent<Rigidbody2D>();
+        speed = PlayerPrefs.GetInt("Hero speed");
+
     }
+     
 }
