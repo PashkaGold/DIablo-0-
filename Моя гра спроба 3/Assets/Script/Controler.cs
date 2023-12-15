@@ -9,11 +9,12 @@ public class Controler : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 direction;
     public Animator animator;
-    public float speed;
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
     void Update()
     {
@@ -24,9 +25,9 @@ public class Controler : MonoBehaviour
         // Рухаємо персонажа
         Vector2 movement = new Vector2(direction.x, direction.y).normalized;
         rb.velocity = movement * moveSpeed;
-        animator.SetFloat("Horizontal", direction.x);
-        animator.SetFloat("Vertical", direction.y);
-        animator.SetFloat("Speed", direction.sqrMagnitude);
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
         // Провіряємо, чи гравець натиснув клавішу атаки (наприклад, пробіл)
         if (Input.GetKeyDown(KeyCode.Space))
         {

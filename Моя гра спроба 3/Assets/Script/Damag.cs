@@ -6,6 +6,7 @@ public class Damag : MonoBehaviour
 {
     public int collisionDamage = 10;
     public string collisionTag;
+    public string collisionTag1;
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
@@ -14,5 +15,11 @@ public class Damag : MonoBehaviour
             Health health = coll.gameObject.GetComponent<Health>();
             health.TakeHit(collisionDamage);
         }
+        if (coll.gameObject.tag == collisionTag1)
+        {
+            Health health = coll.gameObject.GetComponent<Health>();
+            health.TakeHit(collisionDamage);
+        }
     }
 }
+

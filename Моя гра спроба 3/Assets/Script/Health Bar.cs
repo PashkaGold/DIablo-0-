@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class HealthBar: MonoBehaviour
 {
     public Slider slider;
-    public Health playerhealth;
+    public Character playerhealth;
 
     private void Start()
     {
-        SetMaxHealth(playerhealth.maxHealth);
+        SetMaxHealth(playerhealth.MaxHealth);
     }
     private void Update()
     {
-        SetHealth(playerhealth.health);
+        SetHealth(playerhealth.Health);
     }
     public void SetMaxHealth(int health)
     {

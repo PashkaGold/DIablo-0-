@@ -23,7 +23,7 @@ public class ShopMenu : MonoBehaviour
             }
         }
     }
-    public void Resume()
+     void Resume()
     {
         shopMenu.SetActive(false);
         Time.timeScale = 1f;

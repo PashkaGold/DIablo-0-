@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Testscript : MonoBehaviour
+public class Level : MonoBehaviour
 {
     private Rigidbody2D rd;
-    private float Xvelocity, speed ;
+    public float Xvelocity, speed ;
 
      void Start()
     {
@@ -14,5 +14,5 @@ public class Testscript : MonoBehaviour
         speed = PlayerPrefs.GetInt("Hero speed");
 
     }
-     
+    
 }
